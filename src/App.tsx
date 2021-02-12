@@ -4,6 +4,7 @@ import "./App.css";
 import TinyMceEditor from "./TinyMceEditor";
 
 import TestUseDebounce from "./DemoHooks/useDebounceHook";
+import TestUseThrottle from "./DemoHooks/useThrottleHook";
 
 function App() {
   return (
@@ -13,7 +14,9 @@ function App() {
         <TinyMceEditor visible={false} />
 
         {/* HOOK: useDebounce */}
-        <TestUseDebounce />
+        <TestUseDebounce visible={false} />
+        {/* HOOK: useThrottle */}
+        <TestUseThrottle />
       </div>
     </div>
   );
