@@ -5,6 +5,7 @@ import TinyMceEditor from "./TinyMceEditor";
 
 import TestUseDebounce from "./DemoHooks/useDebounceHook";
 import TestUseThrottle from "./DemoHooks/useThrottleHook";
+import Countup from "./SimpleCountup/Countup";
 
 function App() {
   return (
@@ -16,7 +17,10 @@ function App() {
         {/* HOOK: useDebounce */}
         <TestUseDebounce visible={false} />
         {/* HOOK: useThrottle */}
-        <TestUseThrottle />
+        <TestUseThrottle visible={false} />
+
+        {/* DEMO: Simple Countup */}
+        <Countup end={123} />
       </div>
     </div>
   );
