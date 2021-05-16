@@ -6,6 +6,7 @@ import TinyMceEditor from "./TinyMceEditor";
 import TestUseDebounce from "./DemoHooks/useDebounceHook";
 import TestUseThrottle from "./DemoHooks/useThrottleHook";
 import Countup from "./SimpleCountup/Countup";
+import Carousel from "./Carousel";
 
 function App() {
   return (
@@ -20,7 +21,10 @@ function App() {
         <TestUseThrottle visible={false} />
 
         {/* DEMO: Simple Countup */}
-        <Countup end={123} />
+        <Countup end={123} visible={false} />
+
+        <Carousel visible />
+
       </div>
     </div>
   );

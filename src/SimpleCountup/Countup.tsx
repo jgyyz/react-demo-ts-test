@@ -1,13 +1,14 @@
 import React, { useEffect, useRef } from 'react'
+import { BaseProps } from '../utils/code'
 
-interface ICountupProps {
+interface ICountupProps extends BaseProps{
   start?: number;
   end: number;
   duration?: number;
 }
 
 const Countup: React.FC<ICountupProps> = (props) => {
-  const { start = 0, end, duration = 2 } = props
+  const { visible = true, start = 0, end, duration = 2 } = props
   const countRef = useRef<HTMLDivElement>(null)
   const startTimeRef = useRef<number>()  // 开始翻牌的时间
   const frameValRef = useRef<number>() // 每一帧的值
@@ -33,7 +34,7 @@ const Countup: React.FC<ICountupProps> = (props) => {
   }
 
   return <>
-  <div ref={countRef} />
+  {visible && <div ref={countRef} />}
   </>
 }
 
